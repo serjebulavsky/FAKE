@@ -38,7 +38,7 @@ let getChangedFiles repositoryDir revision1 revision2 =
             let a = line.Split('\t')
             FileStatus.Parse a.[0],a.[1])
 
-/// Gets all changed files in the current repository.
+/// Gets all files in the current repository.
 let getAllFiles repositoryDir =
     let _,msg,_ = runGitCommand repositoryDir <| sprintf "ls-files"
     msg
